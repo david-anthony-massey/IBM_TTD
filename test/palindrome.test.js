@@ -1,3 +1,5 @@
+const { isPalindrome } = require('../isPalindrome');
+
 const expect = require('chai').expect;
 
 describe(`palindrome test suite`, () => {
@@ -8,7 +10,9 @@ describe(`palindrome test suite`, () => {
   });
 
   describe(`palindrome function tests if string is a palindrome`, () => {
-    it('true for mom');
+    it('true for mom', () => {
+      expect(isPalindrome('mom')).to.be.true;
+    });
     it('false for dude');
     it('true for mom mom');
     it('false for dad mom');
