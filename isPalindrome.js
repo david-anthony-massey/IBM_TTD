@@ -1,8 +1,9 @@
-const isPalindrome = string => {
-  if (string.trim() === '') return false;
+const isPalindrome = phrase => {
+  if (phrase === '') throw new Error('empty strings are not palindromes');
+  if (phrase.trim() === '') return false;
   return (
-    string ===
-    string
+    phrase ===
+    phrase
       .split('')
       .reverse()
       .join('')

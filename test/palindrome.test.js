@@ -23,7 +23,9 @@ describe(`palindrome test suite`, () => {
       expect(isPalindrome('   ')).to.be.false;
     });
     it('error for empty string', () => {
-      expect(isPalindrome('')).to.throw.console.error('empty strings are not palindromes');
+      expect(function() {
+        isPalindrome('');
+      }).to.throw('empty strings are not palindromes');
     });
     it('error for not a string');
   });
