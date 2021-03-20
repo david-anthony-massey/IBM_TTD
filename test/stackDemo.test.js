@@ -1,4 +1,4 @@
-const { stackDemo } = require('../stackDemo');
+const { stackDemoFactory } = require('../stackDemo');
 const expect = require('chai').expect;
 
 describe(`stackDemo test suite`, () => {
@@ -9,6 +9,9 @@ describe(`stackDemo test suite`, () => {
   });
 
   describe(`stackDemo has properties of a stack`, () => {
+    beforeEach(() => {
+      stackDemo = stackDemoFactory();
+    });
     it('starts empty', () => {
       expect(stackDemo.isEmpty()).to.be.true;
     });
@@ -19,7 +22,10 @@ describe(`stackDemo test suite`, () => {
       stackDemo.push();
       expect(stackDemo.isEmpty()).to.be.false;
     });
-    it('stack size is 1 when pushed');
+    it('stack size is 1 when pushed', () => {
+      stackDemo.push();
+      expect(stackDemo.size()).to.equal(1);
+    });
     it('stack is empty when pushed and popped');
     it('stack size is 0 when pushed and popped');
     it('throws overflow error when pushing to a stack at full capacity');
