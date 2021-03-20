@@ -29,5 +29,8 @@ describe(`fahrenheit to celsius converter tests`, () => {
     it('-40 degrees fahrenheit is -40 degrees celsius', () => {
       expect(convertFToC(-40)).to.equal(-40);
     });
+    it('-273.15 degrees fahrenheit is -459.67 degrees celsius', () => {
+      expect(convertFToC(-459.67)).to.equal(-273.15);
+    });
   });
 });
