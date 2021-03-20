@@ -26,7 +26,11 @@ describe(`stackDemo test suite`, () => {
       stackDemo.push();
       expect(stackDemo.size()).to.equal(1);
     });
-    it('stack is empty when pushed and popped');
+    it('stack is empty when pushed and popped', () => {
+      stackDemo.push();
+      stackDemo.pop();
+      expect(stackDemo.isEmpty()).to.be.true;
+    });
     it('stack size is 0 when pushed and popped');
     it('throws overflow error when pushing to a stack at full capacity');
     it('throw underflow error when popping an empty stack');
