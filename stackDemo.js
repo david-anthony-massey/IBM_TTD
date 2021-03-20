@@ -2,7 +2,7 @@ const stackDemoFactory = () => {
   let empty = true;
   let count = 0;
   return {
-    isEmpty: () => empty,
+    isEmpty: () => count === 0,
     size: () => count,
     push: () => {
       empty = false;
@@ -10,6 +10,7 @@ const stackDemoFactory = () => {
     },
     pop: () => {
       empty = true;
+      count -= 1;
     },
   };
 };
