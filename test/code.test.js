@@ -19,6 +19,8 @@ describe.only(`fahrenheit to celsius converter tests`, () => {
       expect(convertFToC(32)).to.equal(0);
     });
 
-    it('50 degrees fahrenheit is 10 degrees celsius');
+    it('50 degrees fahrenheit is 10 degrees celsius', () => {
+      expect(convertFToC(50)).to.equal(10);
+    });
   });
 });
