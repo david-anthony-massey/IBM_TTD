@@ -1,0 +1,20 @@
+{
+  "name": "ibm_environment",
+  "version": "1.0.0",
+  "description": "A testing environment for IBM interview",
+  "main": "code.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "David M.",
+  "license": "ISC",
+  "type": "module"
+}
