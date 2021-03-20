@@ -26,5 +26,8 @@ describe(`fahrenheit to celsius converter tests`, () => {
     it('-22 degrees fahrenheit is -30 degrees celsius', () => {
       expect(convertFToC(-22)).to.equal(-30);
     });
+    it('-40 degrees fahrenheit is -40 degrees celsius', () => {
+      expect(convertFToC(-40)).to.equal(-40);
+    });
   });
 });
