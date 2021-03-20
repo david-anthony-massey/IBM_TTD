@@ -15,7 +15,10 @@ describe.only(`fahrenheit to celsius converter tests`, () => {
       expect(convertFToC(212)).to.equal(100);
     });
 
-    it('32 degrees fahrenheit is 0 degrees celsius');
+    it('32 degrees fahrenheit is 0 degrees celsius', () => {
+      expect(convertFToC(32)).to.equal(0);
+    });
+
     it('50 degrees fahrenheit is 10 degrees celsius');
   });
 });
