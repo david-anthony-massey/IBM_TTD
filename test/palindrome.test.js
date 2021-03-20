@@ -13,7 +13,9 @@ describe(`palindrome test suite`, () => {
     it('true for mom', () => {
       expect(isPalindrome('mom')).to.be.true;
     });
-    it('false for dude');
+    it('false for dude', () => {
+      expect(isPalindrome('dude')).to.be.false;
+    });
     it('true for mom mom');
     it('false for dad mom');
     it('true for whitespace');
