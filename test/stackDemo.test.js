@@ -12,7 +12,9 @@ describe(`stackDemo test suite`, () => {
     it('starts empty', () => {
       expect(stackDemo.isEmpty()).to.be.true;
     });
-    it('starts with stack size of 0');
+    it('starts with stack size of 0', () => {
+      expect(stackDemo.size()).to.equal(0);
+    });
     it('is not empty when pushed');
     it('stack size is 1 when pushed');
     it('stack is empty when pushed and popped');
