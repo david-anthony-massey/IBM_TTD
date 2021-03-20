@@ -19,7 +19,9 @@ describe(`palindrome test suite`, () => {
     it('false for dad mom', () => {
       expect(isPalindrome('dad mom')).to.be.false;
     });
-    it('true for whitespace');
+    it('true for whitespace', () => {
+      expect(isPalindrome('   ')).to.be.false;
+    });
     it('error for empty string');
     it('error for not a string');
   });
