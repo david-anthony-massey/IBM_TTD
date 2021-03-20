@@ -4,7 +4,7 @@ var expect = require('chai').expect;
 var assert = require('chai').assert;
 var should = require('chai').should;
 
-describe.only(`fahrenheit to celsius converter tests`, () => {
+describe(`fahrenheit to celsius converter tests`, () => {
   describe(`canary spec`, () => {
     it(`shows the infrastructure works`, () => {
       expect(true).to.be.true;
@@ -21,6 +21,10 @@ describe.only(`fahrenheit to celsius converter tests`, () => {
 
     it('50 degrees fahrenheit is 10 degrees celsius', () => {
       expect(convertFToC(50)).to.equal(10);
+    });
+
+    it('-22 degrees fahrenheit is -30 degrees celsius', () => {
+      expect(convertFToC(-22)).to.equal(-30);
     });
   });
 });
