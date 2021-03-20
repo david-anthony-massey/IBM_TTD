@@ -27,6 +27,10 @@ describe(`palindrome test suite`, () => {
         isPalindrome('');
       }).to.throw('empty strings are not palindromes');
     });
-    it('error for not a string');
+    it('error for not a string', () => {
+      expect(() => {
+        isPalindrome(121);
+      }).to.throw('input must be a string');
+    });
   });
 });
