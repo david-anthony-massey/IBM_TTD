@@ -5,7 +5,7 @@ const assert = require('chai').assert;
 const should = require('chai').should;
 
 describe(`fahrenheit to celsius converter tests`, () => {
-  describe(`canary spec`, () => {
+  describe(`convertFToC canary spec`, () => {
     it(`shows the infrastructure works`, () => {
       expect(true).to.be.true;
     });
