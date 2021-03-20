@@ -22,7 +22,9 @@ describe(`palindrome test suite`, () => {
     it('true for whitespace', () => {
       expect(isPalindrome('   ')).to.be.false;
     });
-    it('error for empty string');
+    it('error for empty string', () => {
+      expect(isPalindrome('')).to.throw.console.error('empty strings are not palindromes');
+    });
     it('error for not a string');
   });
 });
