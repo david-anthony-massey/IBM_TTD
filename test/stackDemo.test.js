@@ -1,3 +1,4 @@
+const { stackDemo } = require('../stackDemo');
 const expect = require('chai').expect;
 
 describe(`stackDemo test suite`, () => {
@@ -8,7 +9,9 @@ describe(`stackDemo test suite`, () => {
   });
 
   describe(`stackDemo has properties of a stack`, () => {
-    it('starts empty');
+    it('starts empty', () => {
+      expect(stackDemo.isEmpty()).to.be.true;
+    });
     it('starts with stack size of 0');
     it('is not empty when pushed');
     it('stack size is 1 when pushed');
