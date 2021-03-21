@@ -1,13 +1,13 @@
 const primeFactorizer = number => {
-  let arr = [];
+  let primeFactors = [];
   if (number > 1) {
-    if (number % 2 === 0) {
-      arr.push(2);
+    while (number % 2 === 0) {
+      primeFactors.push(2);
       number /= 2;
     }
-    if (number > 1) arr.push(number);
+    if (number > 1) primeFactors.push(number);
   }
-  return arr;
+  return primeFactors;
 };
 
 module.exports = { primeFactorizer };
