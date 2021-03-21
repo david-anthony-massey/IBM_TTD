@@ -1,18 +1,15 @@
 const stackDemoFactory = () => {
-  let count = 0;
-  let element;
+  let elements = [];
   return {
-    isEmpty: () => count === 0,
-    size: () => count,
-    push: ele => {
-      if (count === 2) throw new Error('capacity overflow error');
-      count += 1;
-      element = ele;
+    isEmpty: () => elements.length === 0,
+    size: () => elements.length,
+    push: element => {
+      if (elements.length === 2) throw new Error('capacity overflow error');
+      elements.push(element);
     },
     pop: () => {
-      if (count === 0) throw new Error('capacity underflow error');
-      count -= 1;
-      return element;
+      if (elements.length === 0) throw new Error('capacity underflow error');
+      return elements.pop();
     },
   };
 };

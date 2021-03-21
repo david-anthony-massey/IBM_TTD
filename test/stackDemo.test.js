@@ -52,7 +52,12 @@ describe(`stackDemo test suite`, () => {
       stackDemo.push('a');
       expect(stackDemo.pop()).to.equal('a');
     });
-    it('pops two items with the most recent first');
+    it('pops two items with the most recent first', () => {
+      stackDemo.push('1');
+      stackDemo.push('2');
+      expect(stackDemo.pop()).to.equal('2');
+      expect(stackDemo.pop()).to.equal('1');
+    });
     it('accepts only a positive capacity');
   });
 });
