@@ -1,15 +1,13 @@
 const stackDemoFactory = () => {
-  let empty = true;
   let count = 0;
   return {
     isEmpty: () => count === 0,
     size: () => count,
     push: () => {
-      empty = false;
+      if (count === 2) throw new Error('capacity overflow error');
       count += 1;
     },
     pop: () => {
-      empty = true;
       count -= 1;
     },
   };

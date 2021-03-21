@@ -36,7 +36,13 @@ describe(`stackDemo test suite`, () => {
       stackDemo.pop();
       expect(stackDemo.size()).to.equal(0);
     });
-    it('throws overflow error when pushing to a stack at full capacity');
+    it('throws overflow error when pushing to a stack at full capacity', () => {
+      stackDemo.push();
+      stackDemo.push();
+      expect(() => {
+        stackDemo.push();
+      }).to.throw('capacity overflow error');
+    });
     it('throw underflow error when popping an empty stack');
     it('pops the same one item when pushed');
     it('pops two items with the most recent first');
