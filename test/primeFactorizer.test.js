@@ -11,7 +11,9 @@ describe.only(`isPrime test suite`, () => {
     it('for 1 return []', () => {
       expect(primeFactorizer(1)).to.deep.equal([]);
     });
-    it('for 2 return [2]');
+    it('for 2 return [2]', () => {
+      expect(primeFactorizer(2)).to.deep.equal([2]);
+    });
     it('for 4 return [2,2]');
   });
 });
