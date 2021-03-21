@@ -8,6 +8,7 @@ const stackDemoFactory = () => {
       count += 1;
     },
     pop: () => {
+      if (count === 0) throw new Error('capacity underflow error');
       count -= 1;
     },
   };

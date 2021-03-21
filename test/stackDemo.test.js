@@ -43,7 +43,11 @@ describe(`stackDemo test suite`, () => {
         stackDemo.push();
       }).to.throw('capacity overflow error');
     });
-    it('throw underflow error when popping an empty stack');
+    it('throw underflow error when popping an empty stack', () => {
+      expect(() => {
+        stackDemo.pop();
+      }).to.throw('capacity underflow error');
+    });
     it('pops the same one item when pushed');
     it('pops two items with the most recent first');
     it('accepts only a positive capacity');
