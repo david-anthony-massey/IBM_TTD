@@ -1,10 +1,11 @@
-const stackDemoFactory = () => {
+const stackDemoFactory = (capacity = 2) => {
+  if (capacity < 1) throw new Error('invalid capacity');
   let elements = [];
   return {
     isEmpty: () => elements.length === 0,
     size: () => elements.length,
     push: element => {
-      if (elements.length === 2) throw new Error('capacity overflow error');
+      if (elements.length === capacity) throw new Error('capacity overflow error');
       elements.push(element);
     },
     pop: () => {

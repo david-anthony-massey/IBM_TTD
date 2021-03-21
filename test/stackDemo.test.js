@@ -58,6 +58,10 @@ describe(`stackDemo test suite`, () => {
       expect(stackDemo.pop()).to.equal('2');
       expect(stackDemo.pop()).to.equal('1');
     });
-    it('accepts only a positive capacity');
+    it('accepts only a positive capacity', () => {
+      expect(() => {
+        stackDemo = stackDemoFactory(-1);
+      }).to.throw('invalid capacity');
+    });
   });
 });
