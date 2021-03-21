@@ -35,5 +35,11 @@ describe.only(`isPrime test suite`, () => {
     it('for 25 return [5,5]', () => {
       expect(primeFactorizer(25)).to.deep.equal([5, 5]);
     });
+    it('for 864 return [2,2,2,2,2,3,3,3]', () => {
+      expect(primeFactorizer(864)).to.deep.equal([2, 2, 2, 2, 2, 3, 3, 3]);
+    });
+    it('for 997 return [997]', () => {
+      expect(primeFactorizer(997)).to.deep.equal([997]);
+    });
   });
 });
